@@ -1,0 +1,5 @@
+<h3><%= @post.title %></h3>
+<%= simple_format @post.body %>
+<p><%= post_footer(@post) %></p>
+<%= link_to "Edytuj wpis", edit_post_path(@post) %>
+<p><%= link_to "Wróć do spisu", posts_path %></p>
