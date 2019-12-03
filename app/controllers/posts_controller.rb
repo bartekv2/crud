@@ -32,7 +32,16 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def published
+    @posts = Post.where(published: true)
+    render action: "index"
+  end
+
   def show
+    @post = Post.find(params[:id])
+  end
+
+  def confirm_destroy
     @post = Post.find(params[:id])
   end
 
